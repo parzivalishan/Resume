@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISHAN D - Web3 Full Stack Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #e0e0e0;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #000000;
+        }
+
+        .resume-container {
+            background: #0B0C0E;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            border: 1px solid #1a1a1a;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .links {
+            margin-bottom: 20px;
+        }
+
+        .links a {
+            color: #64b5f6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .links a:hover {
+            color: #90caf9;
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #ffffff;
+            font-size: 1.4em;
+            border-bottom: 2px solid #64b5f6;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            color: #90caf9;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #64b5f6;
+            position: absolute;
+            left: -15px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .skill-category {
+            margin-bottom: 15px;
+        }
+
+        .skill-category strong {
+            color: #90caf9;
+        }
+
+        a {
+            color: #64b5f6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #90caf9;
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: #000000;
+            }
+            .resume-container {
+                background: white;
+                box-shadow: none;
+                padding: 0;
+                border: none;
+            }
+            h1, h2, .section-title {
+                color: #000000;
+            }
+            .subtitle {
+                color: #333333;
+            }
+            .project-title, .skill-category strong {
+                color: #1976d2;
+            }
+            ul li::before {
+                color: #1976d2;
+            }
+            a {
+                color: #1976d2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .resume-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Rest of the HTML content remains exactly the same as before -->
+    <div class="resume-container">
+        <div class="header">
+            <h1>ISHAN D</h1>
+            <div class="subtitle">Web3 Full Stack Developer</div>
+            <div class="links">
+                <a href="https://github.com/parzivalishan" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/in/a-m-180a55258/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>Experienced Web3 Full Stack Developer with 4 years of specialized experience in blockchain development across EVM chains and Solana. Demonstrated track record of identifying ecosystem gaps and building scalable open-source solutions. Proven ability to architect and implement complex smart contracts and user-friendly dApps. Passionate about creating accessible blockchain tools and improving developer experiences.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Blockchain:</strong> Solana, EVM Chains, Web3.js, Rust, Solidity
+                </div>
+                <div class="skill-category">
+                    <strong>Frontend:</strong> JavaScript, HTML, CSS, React.js
+                </div>
+                <div class="skill-category">
+                    <strong>Backend:</strong> Node.js, Python
+                </div>
+                <div class="skill-category">
+                    <strong>Development Tools:</strong> Git, CLI Development
+                </div>
+                <div class="skill-category">
+                    <strong>Smart Contract Development:</strong> Custom Vesting Systems, Token Distribution
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Key Projects</h2>
+            
+            <div class="project">
+                <div class="project-title">Solana Explorer | Lead Developer</div>
+                <ul>
+                    <li>Developed an enhanced Solana block explorer improving transaction readability and user experience</li>
+                    <li>Implemented comprehensive transaction parsing and data visualization</li>
+                    <li>Tech Stack: React.js, Solana Web3.js, TypeScript</li>
+                    <li><a href="https://sol-explorer.vercel.app/3887XsGkKZKg3cgy4cXKnHKeJSQgeLDACmf5Hdijr329vcRSdaV4gZDHNpaT63NRssaWErAND3ftRvvcpTbRZPAa" target="_blank">View Project</a></li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Multichain Launchpad | Full Stack Developer</div>
+                <ul>
+                    <li>Architected a cross-chain IDO platform supporting simultaneous token sales across multiple blockchains</li>
+                    <li>Implemented secure smart contracts for token distribution and sale management</li>
+                    <li>Built responsive frontend interface for project launches and user participation</li>
+                    <li><a href="https://newsuper.vercel.app/" target="_blank">View Platform</a></li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Disperse/Multisender dApp | Developer</div>
+                <ul>
+                    <li>Engineered an efficient EVM token distribution system for batch transfers</li>
+                    <li>Implemented gas-optimized smart contracts for bulk token operations</li>
+                    <li>Created intuitive interface for managing multiple token transfers</li>
+                    <li><a href="https://newsuper.vercel.app/disperse" target="_blank">View Disperse dApp</a></li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Prediction Market Platform | Full Stack Developer</div>
+                <ul>
+                    <li>Developed a comprehensive prediction market platform with templated betting markets</li>
+                    <li>Implemented smart contracts for market creation, betting, and automated resolution</li>
+                    <li>Built user-friendly interface for market participation and tracking</li>
+                    <li><a href="https://newsuper.vercel.app/predictionmarket" target="_blank">View Platform</a></li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Token Claim System | Developer</div>
+                <ul>
+                    <li>Designed and implemented secure token distribution and claiming mechanism</li>
+                    <li>Built flexible claiming interface supporting multiple token types</li>
+                    <li>Integrated robust verification system for eligible claims</li>
+                    <li><a href="https://newsuper.vercel.app/claim/v4" target="_blank">View System</a></li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Solana Token Distribution CLI | Creator</div>
+                <ul>
+                    <li>Created an open-source CLI tool addressing the lack of token distribution solutions in the Solana ecosystem</li>
+                    <li>Implemented support for Mainnet, Devnet, and Testnet environments</li>
+                    <li>Added flexible RPC configuration capabilities</li>
+                    <li><a href="https://github.com/Superchain-exchange/Multisender" target="_blank">View Repository</a></li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Advanced Smart Contracts | Smart Contract Developer</div>
+                <ul>
+                    <li>Developed a dynamic vesting contract supporting multiple vesting types (linear, monthly, interval, custom) in a single contract</li>
+                    <li>Implemented multi-pool functionality for efficient token management</li>
+                    <li>Created automated testing suites ensuring contract reliability</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Professional Strengths</h2>
+            <ul>
+                <li>Strong problem-solving skills demonstrated through creating missing ecosystem tools</li>
+                <li>Excellent written communication evidenced by technical documentation and open-source contributions</li>
+                <li>Deep understanding of blockchain technology across multiple ecosystems</li>
+                <li>Rapid learning ability shown through mastery of multiple blockchain platforms</li>
+                <li>Passionate about Web3 with 4 years of dedicated development experience</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Languages and Frameworks</h2>
+            <ul>
+                <li>Rust (Solana Development)</li>
+                <li>Solidity (Smart Contracts)</li>
+                <li>JavaScript/TypeScript</li>
+                <li>Python</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <p>BTech in Computer Science</p>
+        </div>
+    </div>
+</body>
+</html>
