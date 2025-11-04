@@ -1,434 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISHAN D - Web3 Full Stack Developer</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='black'/></svg>" type="image/svg+xml"> <!-- Filled black logo -->
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ishan AM – Full Stack Web3 Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-}
-
-body {
-    line-height: 1.6;
-    color: #94A3B8;
-    background: #0B0C0E;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-.resume-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 48px;
-    background: #13151A;
-    border-radius: 24px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.header {
-    text-align: center;
-    margin-bottom: 48px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-h1 {
-    color: #F8FAFC;
-    font-size: 3.5em;
-    margin-bottom: 12px;
-    letter-spacing: -0.03em;
-    font-weight: 800;
-    background: linear-gradient(135deg, #F8FAFC 0%, #3B82F6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-    color: #64748B;
-    font-size: 1.6em;
-    margin-bottom: 24px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 32px;
-}
-
-.social-icon {
-    width: 28px;
-    height: 28px;
-    transition: all 0.3s ease;
-    fill: #64748B;
-}
-
-.social-icon:hover {
-    transform: translateY(-3px) scale(1.1);
-    fill: #3B82F6;
-}
-
-.section {
-    margin-bottom: 48px;
-    animation: fadeIn 0.6s ease-out;
-}
-
-@keyframes fadeIn {
-    from { 
-        opacity: 0; 
-        transform: translateY(20px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
-}
-
-.section-title {
-    color: #F8FAFC;
-    font-size: 2em;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #3B82F6;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background: linear-gradient(90deg, #3B82F6, transparent);
-}
-
-.project {
-    background: #1A1D23;
-    padding: 32px;
-    border-radius: 16px;
-    margin-bottom: 24px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.project:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    border-color: rgba(59, 130, 246, 0.2);
-}
-
-.project-title {
-    color: #3B82F6;
-    font-size: 1.4em;
-    font-weight: 600;
-    margin-bottom: 20px;
-    letter-spacing: -0.01em;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-ul li {
-    margin-bottom: 14px;
-    padding-left: 24px;
-    position: relative;
-}
-
-ul li::before {
-    content: "→";
-    color: #3B82F6;
-    position: absolute;
-    left: 0;
-    transform: translateY(-1px);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-}
-
-.skill-category {
-    background: #1A1D23;
-    padding: 24px;
-    border-radius: 16px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.skill-category:hover {
-    transform: translateY(-4px);
-    border-color: rgba(59, 130, 246, 0.2);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.skill-category strong {
-    color: #3B82F6;
-    display: block;
-    margin-bottom: 12px;
-    font-size: 1.2em;
-    letter-spacing: -0.01em;
-}
-
-a {
-    color: #60A5FA;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-a:hover {
-    color: #93C5FD;
-}
-
-a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: -2px;
-    left: 0;
-    background-color: #3B82F6;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-}
-
-a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-@media (max-width: 768px) {
-    .resume-container {
-        margin: 20px;
-        padding: 24px;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
+    :root {
+      --bg-primary: #000000;
+      --bg-secondary: #0a0a0a;
+      --bg-card: #111111;
+      --text-primary: #ffffff;
+      --text-secondary: #a3a3a3;
+      --text-muted: #737373;
+      --accent: #0ea5e9;
+      --accent-hover: #0284c7;
+      --border: #1f1f1f;
+      --border-light: #2a2a2a;
     }
 
-    h1 {
-        font-size: 2.8em;
-    }
-
-    .project {
-        padding: 24px;
-    }
-
-    .social-links {
-        gap: 16px;
-    }
-}
-
-@media (max-width: 480px) {
     body {
-        padding: 10px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    .resume-container {
-        margin: 10px;
-        padding: 20px;
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 100px 32px 80px;
     }
 
-    h1 {
-        font-size: 2.4em;
+    /* Header */
+    header {
+      margin-bottom: 96px;
     }
 
-    .subtitle {
-        font-size: 1.3em;
+    .name {
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      line-height: 1.1;
     }
-}
-    </style>
+
+    .tagline {
+      font-size: 18px;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    .contact-bar {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-bar a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-bar a:hover {
+      color: var(--accent);
+    }
+
+    .contact-bar svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    .contact-bar a:hover svg {
+      opacity: 1;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 80px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 28px;
+    }
+
+    .intro-text {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .intro-text:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 24px;
+    }
+
+    .highlight-box p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .highlight-box strong {
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .skill-card {
+      background: var(--bg-secondary);
+      padding: 24px;
+      transition: background 0.2s;
+    }
+
+    .skill-card:hover {
+      background: var(--bg-card);
+    }
+
+    .skill-card strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: 13px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .skill-card span {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Projects */
+    .project-item {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 12px;
+      gap: 16px;
+    }
+
+    .project-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    .project-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: color 0.2s;
+      opacity: 0.8;
+    }
+
+    .project-link:hover {
+      color: var(--accent-hover);
+      opacity: 1;
+    }
+
+    .project-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .project-tech {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* List Styles */
+    .simple-list {
+      list-style: none;
+    }
+
+    .simple-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 14px;
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .simple-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .simple-list a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .simple-list a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 32px;
+    }
+
+    .stat-item {
+      background: var(--bg-secondary);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .stat-value {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 96px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 64px 24px 60px;
+      }
+
+      .name {
+        font-size: 40px;
+      }
+
+      .tagline {
+        font-size: 16px;
+      }
+
+      header {
+        margin-bottom: 64px;
+      }
+
+      section {
+        margin-bottom: 60px;
+      }
+
+      .contact-bar {
+        gap: 24px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .project-header {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .project-link {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .name {
+        font-size: 32px;
+      }
+
+      .contact-bar {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="resume-container">
-        <div class="header">
-            <h1>ISHAN D</h1>
-            <div class="subtitle">Web3 Full Stack Developer</div>
-            <div class="social-links">
-                <a href="mailto:crypticishan@gmail.com" title="Email">
-                    <svg class="social-icon" viewBox="0 0 24 24">
-                        <path d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z"/>
-                    </svg>
-                </a>
-                <a href="https://github.com/parzivalishan" target="_blank" title="GitHub">
-                    <svg class="social-icon" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-                <a href="https://linkedin.com/in/a-m-180a55258/" target="_blank" title="LinkedIn">
-                    <svg class="social-icon" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                </a>
-                <a href="https://x.com/ishanxbt" target="_blank" title="X (Twitter)">
-                    <svg class="social-icon" viewBox="0 0 24 24">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                </a>
-                <a href="https://t.me/crypticishan" target="_blank" title="Telegram">
-                    <svg class="social-icon" viewBox="0 0 24 24">
-                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                    </svg>
-                </a>
-                <a href="https://youtube.com/@letspushweb3" target="_blank" title="YouTube">
-                    <svg class="social-icon" viewBox="0 0 24 24">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                </a>
-            </div>
+  <div class="container">
+    <header>
+      <h1 class="name">Ishan AM</h1>
+      <p class="tagline">Full Stack Web3 Developer specializing in DeFi infrastructure, cross-chain bridges, and on-chain security</p>
+      
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-value">5</span>
+          <span class="stat-label">Years Experience</span>
         </div>
-
-        <!-- Rest of the content remains the same, just copied from your original -->
-        <!-- Professional Summary section -->
-        <div class="section">
-            <h2 class="section-title">Professional Summary</h2>
-            <p>Experienced Web3 Full Stack Developer with 4 years of specialized experience in blockchain development across EVM chains and Solana. Demonstrated track record of identifying ecosystem gaps and building scalable open-source solutions. Proven ability to architect and implement complex smart contracts and user-friendly dApps. Passionate about creating accessible blockchain tools and improving developer experiences.</p>
+        <div class="stat-item">
+          <span class="stat-value">10K+</span>
+          <span class="stat-label">Transactions Tested</span>
         </div>
-
-        <!-- Technical Skills section -->
-        <div class="section">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <strong>Blockchain</strong>
-                    Solana, EVM Chains, Web3.js, Rust, Solidity
-                </div>
-                <div class="skill-category">
-                    <strong>Frontend</strong>
-                    JavaScript, HTML, CSS, React.js
-                </div>
-                <div class="skill-category">
-                    <strong>Backend</strong>
-                    Node.js, Python
-                </div>
-                <div class="skill-category">
-                    <strong>Development Tools</strong>
-                    Git, CLI Development
-                </div>
-                <div class="skill-category">
-                    <strong>Smart Contract Development</strong>
-                    Custom Vesting Systems, Token Distribution
-                </div>
-            </div>
+        <div class="stat-item">
+          <span class="stat-value">7</span>
+          <span class="stat-label">Live Products</span>
         </div>
+      </div>
 
-        <!-- Key Projects section -->
-        <div class="section">
-            <h2 class="section-title">Key Projects</h2>
-            
-            <div class="project">
-                <div class="project-title">Solana Explorer | Lead Developer</div>
-                <ul>
-                    <li>Developed an enhanced Solana block explorer improving transaction readability and user experience</li>
-                    <li>Implemented comprehensive transaction parsing and data visualization</li>
-                    <li>Tech Stack: React.js, Solana Web3.js, TypeScript</li>
-                    <li><a href="https://sol-explorer.vercel.app/3887XsGkKZKg3cgy4cXKnHKeJSQgeLDACmf5Hdijr329vcRSdaV4gZDHNpaT63NRssaWErAND3ftRvvcpTbRZPAa" target="_blank">View Project</a></li>
-                </ul>
-            </div>
+      <div class="contact-bar">
+        <a href="mailto:crypticishan@gmail.com">
+          <svg viewBox="0 0 24 24"><path d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882L4,8.236V6h16V8.236z"/></svg>
+          crypticishan@gmail.com
+        </a>
+        <a href="https://github.com/parzivalishan" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/ishanxbt" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7 19H4V8h3v11zM5.5 6.73c-.97 0-1.75-.79-1.75-1.76S4.53 3.22 5.5 3.22s1.75.79 1.75 1.75-.78 1.76-1.75 1.76zM20 19h-3v-5.6c0-3.37-4-3.11-4 0V19h-3V8h3v1.76C14.4 7.17 20 6.98 20 12.23V19z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://t.me/crypticishan" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Telegram
+        </a>
+      </div>
+    </header>
 
-            <div class="project">
-                <div class="project-title">Multichain Launchpad | Full Stack Developer</div>
-                <ul>
-                    <li>Architected a cross-chain IDO platform supporting simultaneous token sales across multiple blockchains</li>
-                    <li>Implemented secure smart contracts for token distribution and sale management</li>
-                    <li>Built responsive frontend interface for project launches and user participation</li>
-                    <li><a href="https://newsuper.vercel.app/" target="_blank">View Platform</a></li>
-                </ul>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">Disperse/Multisender dApp | Developer</div>
-                <ul>
-                    <li>Engineered an efficient EVM token distribution system for batch transfers</li>
-                    <li>Implemented gas-optimized smart contracts for bulk token operations</li>
-                    <li>Created intuitive interface for managing multiple token transfers</li>
-                    <li><a href="https://newsuper.vercel.app/disperse" target="_blank">View Disperse dApp</a></li>
-                </ul>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">Prediction Market Platform | Full Stack Developer</div>
-                <ul>
-                    <li>Developed a comprehensive prediction market platform with templated betting markets</li>
-                    <li>Implemented smart contracts for market creation, betting, and automated resolution</li>
-                    <li>Built user-friendly interface for market participation and tracking</li>
-                    <li><a href="https://newsuper.vercel.app/predictionmarket" target="_blank">View Platform</a></li>
-                </ul>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">Token Claim System | Developer</div>
-                <ul>
-                    <li>Designed and implemented secure token distribution and claiming mechanism</li>
-                    <li>Built flexible claiming interface supporting multiple token types</li>
-                    <li>Integrated robust verification system for eligible claims</li>
-                    <li><a href="https://newsuper.vercel.app/claim/v4" target="_blank">View System</a></li>
-                </ul>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">Solana Token Distribution CLI | Creator</div>
-                <ul>
-                    <li>Created an open-source CLI tool addressing the lack of token distribution solutions in the Solana ecosystem</li>
-                    <li>Implemented support for Mainnet, Devnet, and Testnet environments</li>
-                    <li>Added flexible RPC configuration capabilities</li>
-                    <li><a href="https://github.com/Superchain-exchange/Multisender" target="_blank">View Repository</a></li>
-                </ul>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">Advanced Smart Contracts | Smart Contract Developer</div>
-                <ul>
-                    <li>Developed a dynamic vesting contract supporting multiple vesting types (linear, monthly, interval, custom) in a single contract</li>
-                    <li>Implemented multi-pool functionality for efficient token management</li>
-                    <li>Created automated testing suites ensuring contract reliability</li>
-                </ul>
-            </div>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">Professional Strengths</h2>
-                <ul>
-                    <li>Strong problem-solving skills demonstrated through creating missing ecosystem tools</li>
-                    <li>Excellent written communication evidenced by technical documentation and open-source contributions</li>
-                    <li>Deep understanding of blockchain technology across multiple ecosystems</li>
-                    <li>Rapid learning ability shown through mastery of multiple blockchain platforms</li>
-                    <li>Passionate about Web3 with 4 years of dedicated development experience</li>
-                </ul>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">Languages and Frameworks</h2>
-                <ul>
-                    <li>Rust (Solana Development)</li>
-                    <li>Solidity (Smart Contracts)</li>
-                    <li>JavaScript/TypeScript</li>
-                    <li>Python</li>
-                    <li>React.js</li>
-                    <li>Node.js</li>
-                </ul>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">Education</h2>
-                <p>BTech in Computer Science</p>
-            </div>
-            </div>
-            </body>
-            </html>
+    <section>
+      <div class="section-label">About</div>
+      <p class="intro-text">Full Stack Web3 Developer with 5 years of experience architecting and deploying decentralized applications across EVM and Solana ecosystems. Creator of <strong>Superchain Exchange</strong> — a comprehensive suite of production-ready DeFi infrastructure including cross-chain bridges, token launchpads, vesting systems, multisig wallets, and developer utilities.</p>
+      <p class="intro-text">Specializing in gas-optimized smart contracts, automated testing frameworks, and scalable backend architecture. Proven track record of building secure, transparent systems that eliminate trust dependencies while maintaining high performance standards.</p>
+      
+      <div class="highlight-box">
+        <p><strong>Technical Philosophy:</strong> Building transparent on-chain systems with modular architecture, comprehensive testing, and production-grade security practices.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <strong>Smart Contracts</strong>
+          <span>Solidity, Rust, Hardhat, Foundry, Anchor</span>
+        </div>
+        <div class="skill-card">
+          <strong>Frontend</strong>
+          <span>React, Next.js, TypeScript, Viem, Wagmi, Ethers.js</span>
+        </div>
+        <div class="skill-card">
+          <strong>Backend</strong>
+          <span>Node.js, Express, Python, PostgreSQL, Redis, SQLite</span>
+        </div>
+        <div class="skill-card">
+          <strong>Infrastructure</strong>
+          <span>Docker, GraphQL, Git, QuickNode, Blockscout APIs</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">Featured Projects</div>
+      
+      <div class="project-item">
+        <div class="project-header">
+          <h3 class="project-title">Superchain Bridge</h3>
+          <a href="https://newsuper.vercel.app" target="_blank" class="project-link">View Live →</a>
+        </div>
+        <p class="project-desc">Multi-chain bridging infrastructure supporting automated native coin and token transfers. Integrated with Blockscout and QuickNode APIs for real-time verification, featuring SQLite-backed transaction tracking and dynamic fee calculation logic. Stress-tested with 10K+ transactions across five EVM chains.</p>
+        <p class="project-tech">Solidity · React · Node.js · SQLite · Blockscout API</p>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <h3 class="project-title">Cross-Chain Launchpad</h3>
+        </div>
+        <p class="project-desc">Fully-featured IDO platform supporting Ethereum, BSC, Polygon, and Optimism. Implements multi-token purchase flows, whitelist management, automated vesting schedules, and real-time analytics dashboard. Designed for scalability with modular contract architecture.</p>
+        <p class="project-tech">Solidity · Next.js · PostgreSQL · Ethers.js</p>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <h3 class="project-title">Dynamic Vesting System</h3>
+        </div>
+        <p class="project-desc">On-chain vesting protocol with multi-round distribution support and optimized claiming mechanism. Achieved ~40% gas reduction through batched operations and efficient storage patterns. Includes admin dashboard for schedule management and beneficiary analytics.</p>
+        <p class="project-tech">Solidity · React · Hardhat · OpenZeppelin</p>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <h3 class="project-title">On-Chain Multisig Safe</h3>
+        </div>
+        <p class="project-desc">Fully transparent multisig wallet storing all transaction data on-chain for maximum security and auditability. Open-source implementation with customizable threshold requirements, transaction queueing, and time-lock mechanisms.</p>
+        <p class="project-tech">Solidity · TypeScript · Foundry · Viem</p>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <h3 class="project-title">Multisender Tool</h3>
+          <a href="https://newsuper.vercel.app/disperse" target="_blank" class="project-link">View Live →</a>
+        </div>
+        <p class="project-desc">Production batch token distribution platform deployed across multiple chains. Features CSV import, gas optimization, transaction simulation, and detailed reporting. Fully open-source with comprehensive documentation.</p>
+        <p class="project-tech">Solidity · React · Wagmi · CSV Processing</p>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <h3 class="project-title">CLI Distribution Suite</h3>
+          <a href="https://github.com/Superchain-exchange/Multisender" target="_blank" class="project-link">View on GitHub →</a>
+        </div>
+        <p class="project-desc">Python-based automation toolkit for high-volume token distribution across EVM and Solana. Supports parallel processing, automatic retry logic, and comprehensive logging. Stress-tested for large-scale airdrops and batch operations.</p>
+        <p class="project-tech">Python · Solana Web3.js · Ethers.js · CLI</p>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <h3 class="project-title">Web3 Developer Dashboard</h3>
+        </div>
+        <p class="project-desc">Developer-focused interface for contract interaction without requiring source code verification. Includes ABI inference, function call builder, and QR-based wallet with asset viewing and transfer capabilities.</p>
+        <p class="project-tech">React · Next.js · Viem · QR Code Generation</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">Architecture & Infrastructure</div>
+      <ul class="simple-list">
+        <li>Designed modular architecture spanning smart contracts (Solidity, Rust), backend services (Node.js, Python), and frontend applications (React, Next.js)</li>
+        <li>Implemented automated testing pipelines with comprehensive coverage including unit tests, integration tests, and stress testing frameworks</li>
+        <li>Built scalable indexing solutions using Blockscout, QuickNode, and custom PostgreSQL schemas for real-time transaction monitoring</li>
+        <li>Deployed and maintained infrastructure across multiple EVM chains with automated deployment scripts and monitoring systems</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-label">Open Source & Community</div>
+      <ul class="simple-list">
+        <li>Maintains actively-developed public repositories for token distribution tools, multisig implementations, and developer utilities</li>
+        <li>Core contributor to open-source Web3 tooling focused on security best practices and automation workflows</li>
+        <li>Technical ambassador and community builder for NuLink, Velvet Capital, and MetaXseed ecosystems</li>
+        <li>Regular participant in Web3 builder communities, hackathons, and protocol governance discussions</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-label">Education</div>
+      <p class="intro-text"><strong>Bachelor of Technology in Computer Engineering</strong><br>University of Mumbai</p>
+    </section>
+
+    <footer>
+      <p>© 2024 Ishan AM. Built with passion for decentralized systems.</p>
+    </footer>
+  </div>
+</body>
+</html>
